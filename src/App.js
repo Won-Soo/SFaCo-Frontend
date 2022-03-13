@@ -6,15 +6,11 @@ class Subject extends Component {
     render() {
         return (
             <header>
-                <h1 class="title">SFaCo</h1>
+                <h1 class="title">{this.props.title}</h1>
                 <nav>
                     <ul class="menu1">
-                        <li>
-                            전체
-                        </li>
-                        <li>
-                            커뮤니티
-                        </li>
+                        <li>전체</li>
+                        <li>커뮤니티</li>
                     </ul>
                 </nav>
             </header>
@@ -57,9 +53,7 @@ class Content extends Component {
                 <li><a href="Login.html">로그인</a></li>
                 <li><a href="MyPage.html">마이페이지</a></li>
             </ul>
-            <p>
-                책임자 : 원동연, 한수현 | 서비스문의 : e-mail@naver.com
-            </p>
+            <p>{this.props.desc}</p>
         </footer>
         );
     }
@@ -69,10 +63,11 @@ class App extends Component {
     render() {
         return (
             <div className='App'>
-                <Subject></Subject>
+                <Subject title="SFaCo"></Subject>
                 <TOC1></TOC1>
                 <TOC2></TOC2>
-                <Content></Content>
+                <Content desc="책임자 : 원동연, 한수현 | 서비스문의 : e-mail@naver.com
+"></Content>
             </div>
         )
     }
